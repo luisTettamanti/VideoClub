@@ -25,7 +25,7 @@ Public Class Conexion
 
     Protected Function Abrir()
         Try
-            strConexion = "Data Source=localhost; DataBase=VideoClub; Trusted_Connection=True"
+            strConexion = "Data Source=localhost\SQLEXPRESS; DataBase=VideoClub; Trusted_Connection=True"
             objConexion = New SqlConnection(strConexion)
             objConexion.Open()
             Return True
