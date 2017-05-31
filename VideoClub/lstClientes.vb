@@ -21,10 +21,10 @@
             Dim mensaje As DialogResult = MsgBox("¿Seguro quieres borrar?", MsgBoxStyle.YesNo, "Borrar")
             If mensaje = Windows.Forms.DialogResult.Yes Then
                 If cliente.BorrarCliente(cliente.id) Then
-                    MessageBox.Show("El huesped se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("El cliente se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     cliente.TraerTabClientes(dgvCliente)
                 Else
-                    MessageBox.Show("El huesped no se ha borrado ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("El cliente no se ha borrado ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             End If
         End If
