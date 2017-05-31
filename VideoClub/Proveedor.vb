@@ -83,6 +83,7 @@ Public Class Proveedor
 
         Dim objcomando As New SqlCommand("ProveedorTraerTab", objConexion)
         objcomando.CommandType = CommandType.StoredProcedure
+
         Dim objdatatable As New Data.DataTable
         Dim objDataAdapter As New SqlDataAdapter(objcomando)
         objDataAdapter.Fill(objdatatable)
