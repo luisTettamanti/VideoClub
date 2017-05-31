@@ -81,7 +81,7 @@ Public Class Proveedor
     Public Sub traertabProveedor(ByVal tabla As DataGridView)
         Abrir()
 
-        Dim objcomando As New SqlCommand("ProveedorTraerTab", objConexion)
+        Dim objcomando As New SqlCommand("TraerTabProveedor", objConexion)
         objcomando.CommandType = CommandType.StoredProcedure
 
         Dim objdatatable As New Data.DataTable
@@ -95,7 +95,7 @@ Public Class Proveedor
         tabla.Columns("Direccion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Telefono").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("RazonSocial").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        tabla.Columns("Localiddad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Localidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         Cerrar()
 
