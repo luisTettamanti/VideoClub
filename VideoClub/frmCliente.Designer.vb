@@ -174,6 +174,7 @@ Partial Class frmCliente
         Me.Controls.Add(Me.lblId)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
