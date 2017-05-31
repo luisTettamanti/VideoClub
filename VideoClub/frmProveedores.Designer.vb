@@ -107,14 +107,14 @@ Partial Class frmProveedores
         '
         Me.txtId.Location = New System.Drawing.Point(109, 9)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(100, 20)
+        Me.txtId.Size = New System.Drawing.Size(62, 20)
         Me.txtId.TabIndex = 7
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(109, 43)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(134, 20)
         Me.txtNombre.TabIndex = 8
         '
         'txtCuit
@@ -128,7 +128,7 @@ Partial Class frmProveedores
         '
         Me.txtDireccion.Location = New System.Drawing.Point(109, 116)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(134, 20)
         Me.txtDireccion.TabIndex = 10
         '
         'txtTelefono
@@ -142,19 +142,20 @@ Partial Class frmProveedores
         '
         Me.txtRazonSocial.Location = New System.Drawing.Point(109, 191)
         Me.txtRazonSocial.Name = "txtRazonSocial"
-        Me.txtRazonSocial.Size = New System.Drawing.Size(100, 20)
+        Me.txtRazonSocial.Size = New System.Drawing.Size(134, 20)
         Me.txtRazonSocial.TabIndex = 12
         '
         'txtLocalidad
         '
         Me.txtLocalidad.Location = New System.Drawing.Point(109, 232)
         Me.txtLocalidad.Name = "txtLocalidad"
-        Me.txtLocalidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtLocalidad.Size = New System.Drawing.Size(134, 20)
         Me.txtLocalidad.TabIndex = 13
         '
         'Aceptar
         '
-        Me.Aceptar.Location = New System.Drawing.Point(56, 270)
+        Me.Aceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Aceptar.Location = New System.Drawing.Point(56, 266)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Aceptar.TabIndex = 14
@@ -163,18 +164,19 @@ Partial Class frmProveedores
         '
         'Cancelar
         '
-        Me.Cancelar.Location = New System.Drawing.Point(181, 270)
+        Me.Cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Cancelar.Location = New System.Drawing.Point(159, 266)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.Cancelar.TabIndex = 15
-        Me.Cancelar.Text = "Aceptar"
+        Me.Cancelar.Text = "Cancelar"
         Me.Cancelar.UseVisualStyleBackColor = True
         '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 315)
+        Me.ClientSize = New System.Drawing.Size(286, 301)
         Me.Controls.Add(Me.Cancelar)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.txtLocalidad)
