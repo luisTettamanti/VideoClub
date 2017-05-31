@@ -46,7 +46,7 @@ Partial Class lstClientes
         Me.dgvCliente.ReadOnly = True
         Me.dgvCliente.RowHeadersVisible = False
         Me.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCliente.Size = New System.Drawing.Size(600, 312)
+        Me.dgvCliente.Size = New System.Drawing.Size(652, 312)
         Me.dgvCliente.TabIndex = 0
         '
         'btnAgregar
@@ -82,7 +82,7 @@ Partial Class lstClientes
         'btnCerrar
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Location = New System.Drawing.Point(537, 331)
+        Me.btnCerrar.Location = New System.Drawing.Point(589, 331)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 4
@@ -93,7 +93,7 @@ Partial Class lstClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(624, 363)
+        Me.ClientSize = New System.Drawing.Size(676, 363)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)

@@ -102,6 +102,7 @@ Partial Class frmCliente
         '
         'txtNombre
         '
+        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.Location = New System.Drawing.Point(138, 31)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(134, 20)
@@ -110,6 +111,7 @@ Partial Class frmCliente
         'txtDni
         '
         Me.txtDni.Location = New System.Drawing.Point(138, 57)
+        Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(100, 20)
         Me.txtDni.TabIndex = 8
@@ -137,7 +139,7 @@ Partial Class frmCliente
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(125, 173)
+        Me.btnAceptar.Location = New System.Drawing.Point(125, 171)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 12
@@ -146,7 +148,7 @@ Partial Class frmCliente
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(218, 173)
+        Me.btnCancelar.Location = New System.Drawing.Point(218, 171)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 13
@@ -157,7 +159,7 @@ Partial Class frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(316, 207)
+        Me.ClientSize = New System.Drawing.Size(309, 207)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtTelefono)
@@ -173,6 +175,8 @@ Partial Class frmCliente
         Me.Controls.Add(Me.lblNombre)
         Me.Controls.Add(Me.lblId)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCliente"
