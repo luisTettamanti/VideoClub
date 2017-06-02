@@ -103,6 +103,7 @@ Public Class Generos
             objComando.CommandType = CommandType.StoredProcedure
 
             objComando.Parameters.AddWithValue("@Descripción", Generos.Descripción)
+            objComando.Parameters.AddWithValue("@id", Generos.Id)
             
             If objComando.ExecuteNonQuery() Then
                 Return True
