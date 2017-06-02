@@ -75,8 +75,6 @@
         End If
         Close()
 
-        MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-
     End Sub
 
     Private Sub Cancelar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Cancelar.Click

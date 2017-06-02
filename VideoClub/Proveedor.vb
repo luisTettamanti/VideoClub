@@ -25,12 +25,12 @@ Public Class Proveedor
     End Property
 
 
-    Private Cuit_ As Integer
-    Public Property Cuit() As Integer
+    Private Cuit_ As Double
+    Public Property Cuit() As Double
         Get
             Return Cuit_
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As Double)
             Cuit_ = value
         End Set
     End Property
