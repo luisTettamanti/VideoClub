@@ -66,8 +66,15 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actores.vb" />
     <Compile Include="Clientes.vb" />
     <Compile Include="Conexion.vb" />
+    <Compile Include="frmActores.Designer.vb">
+      <DependentUpon>frmActores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmActores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
@@ -141,6 +148,9 @@
     <Compile Include="Proveedor.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmActores.resx">
+      <DependentUpon>frmActores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
