@@ -35,7 +35,7 @@ Partial Class frmGeneros
         Me.btnAceptar.Location = New System.Drawing.Point(44, 93)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 0
+        Me.btnAceptar.TabIndex = 4
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -44,7 +44,7 @@ Partial Class frmGeneros
         Me.btnCancelar.Location = New System.Drawing.Point(155, 93)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 1
+        Me.btnCancelar.TabIndex = 5
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -54,7 +54,7 @@ Partial Class frmGeneros
         Me.lblId.Location = New System.Drawing.Point(41, 19)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(19, 13)
-        Me.lblId.TabIndex = 2
+        Me.lblId.TabIndex = 0
         Me.lblId.Text = "Id:"
         '
         'lblDescripción
@@ -63,7 +63,7 @@ Partial Class frmGeneros
         Me.lblDescripción.Location = New System.Drawing.Point(41, 53)
         Me.lblDescripción.Name = "lblDescripción"
         Me.lblDescripción.Size = New System.Drawing.Size(66, 13)
-        Me.lblDescripción.TabIndex = 3
+        Me.lblDescripción.TabIndex = 1
         Me.lblDescripción.Text = "Descripción:"
         '
         'txtId
@@ -71,14 +71,14 @@ Partial Class frmGeneros
         Me.txtId.Location = New System.Drawing.Point(130, 12)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
-        Me.txtId.TabIndex = 4
+        Me.txtId.TabIndex = 2
         '
         'txtDescripción
         '
         Me.txtDescripción.Location = New System.Drawing.Point(130, 46)
         Me.txtDescripción.Name = "txtDescripción"
         Me.txtDescripción.Size = New System.Drawing.Size(100, 20)
-        Me.txtDescripción.TabIndex = 5
+        Me.txtDescripción.TabIndex = 3
         '
         'frmGeneros
         '
