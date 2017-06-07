@@ -37,7 +37,7 @@ Partial Class lstTitulos
         Me.btnCerrar.BackColor = System.Drawing.Color.Goldenrod
         Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(842, 426)
+        Me.btnCerrar.Location = New System.Drawing.Point(823, 426)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(150, 30)
         Me.btnCerrar.TabIndex = 8
@@ -109,14 +109,14 @@ Partial Class lstTitulos
         Me.dgvTitulo.ReadOnly = True
         Me.dgvTitulo.RowHeadersVisible = False
         Me.dgvTitulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTitulo.Size = New System.Drawing.Size(945, 410)
+        Me.dgvTitulo.Size = New System.Drawing.Size(926, 410)
         Me.dgvTitulo.TabIndex = 5
         '
         'lstTitulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1039, 467)
+        Me.ClientSize = New System.Drawing.Size(1020, 467)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)

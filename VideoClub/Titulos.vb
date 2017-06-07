@@ -186,12 +186,12 @@ Public Class Titulos
             Abrir()
             Dim objComando As New SqlCommand("TituloModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Nombre", Titulo.idGenero)
-            objComando.Parameters.AddWithValue("@Dni", Titulo.idActor)
-            objComando.Parameters.AddWithValue("@Localidad", Titulo.nombre)
-            objComando.Parameters.AddWithValue("@Direccion", Titulo.año)
-            objComando.Parameters.AddWithValue("@Telefono", Titulo.volumen)
-            objComando.Parameters.AddWithValue("@Email", Titulo.director)
+            objComando.Parameters.AddWithValue("@idGenero", Titulo.idGenero)
+            objComando.Parameters.AddWithValue("@idActor", Titulo.idActor)
+            objComando.Parameters.AddWithValue("@nombre", Titulo.nombre)
+            objComando.Parameters.AddWithValue("@año", Titulo.año)
+            objComando.Parameters.AddWithValue("@volumen", Titulo.volumen)
+            objComando.Parameters.AddWithValue("@director", Titulo.director)
             objComando.Parameters.AddWithValue("@Id", Titulo.id)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -206,4 +206,19 @@ Public Class Titulos
         End Try
 
     End Function
+
+    Public Sub TituloCargarActores(ByVal idTitulo As Integer, ByVal tabla As DataGridView)
+        Abrir()
+
+        Dim objComando As New SqlCommand("TituloCargarActores", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        objComando.Parameters.AddWithValue("@idTitulo", idTitulo)
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+        tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Cerrar()
+    End Sub
 End Class

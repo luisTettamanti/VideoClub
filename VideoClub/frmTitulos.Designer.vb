@@ -40,7 +40,12 @@ Partial Class frmTitulo
         Me.lblIdGenero = New System.Windows.Forms.Label
         Me.lblAño = New System.Windows.Forms.Label
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.dgvActores = New System.Windows.Forms.DataGridView
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.btnAgregarActor = New System.Windows.Forms.Button
+        Me.btnBorrarActor = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvActores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDirector
@@ -56,7 +61,7 @@ Partial Class frmTitulo
         Me.lblDirector.AutoSize = True
         Me.lblDirector.BackColor = System.Drawing.Color.Transparent
         Me.lblDirector.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDirector.Location = New System.Drawing.Point(0, 184)
+        Me.lblDirector.Location = New System.Drawing.Point(11, 184)
         Me.lblDirector.Name = "lblDirector"
         Me.lblDirector.Size = New System.Drawing.Size(56, 13)
         Me.lblDirector.TabIndex = 27
@@ -75,7 +80,7 @@ Partial Class frmTitulo
         Me.lblIdActor.AutoSize = True
         Me.lblIdActor.BackColor = System.Drawing.Color.Transparent
         Me.lblIdActor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdActor.Location = New System.Drawing.Point(0, 80)
+        Me.lblIdActor.Location = New System.Drawing.Point(11, 80)
         Me.lblIdActor.Name = "lblIdActor"
         Me.lblIdActor.Size = New System.Drawing.Size(52, 13)
         Me.lblIdActor.TabIndex = 26
@@ -86,7 +91,7 @@ Partial Class frmTitulo
         Me.lblId.AutoSize = True
         Me.lblId.BackColor = System.Drawing.Color.Transparent
         Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblId.Location = New System.Drawing.Point(0, 28)
+        Me.lblId.Location = New System.Drawing.Point(11, 28)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(22, 13)
         Me.lblId.TabIndex = 13
@@ -102,7 +107,7 @@ Partial Class frmTitulo
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(209, 212)
+        Me.btnCancelar.Location = New System.Drawing.Point(167, 404)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 24
@@ -127,7 +132,7 @@ Partial Class frmTitulo
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(114, 212)
+        Me.btnAceptar.Location = New System.Drawing.Point(86, 404)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 23
@@ -139,7 +144,7 @@ Partial Class frmTitulo
         Me.lblNombre.AutoSize = True
         Me.lblNombre.BackColor = System.Drawing.Color.Transparent
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(0, 106)
+        Me.lblNombre.Location = New System.Drawing.Point(11, 106)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(54, 13)
         Me.lblNombre.TabIndex = 25
@@ -167,7 +172,7 @@ Partial Class frmTitulo
         Me.lblVolumen.AutoSize = True
         Me.lblVolumen.BackColor = System.Drawing.Color.Transparent
         Me.lblVolumen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVolumen.Location = New System.Drawing.Point(0, 158)
+        Me.lblVolumen.Location = New System.Drawing.Point(11, 158)
         Me.lblVolumen.Name = "lblVolumen"
         Me.lblVolumen.Size = New System.Drawing.Size(59, 13)
         Me.lblVolumen.TabIndex = 18
@@ -178,7 +183,7 @@ Partial Class frmTitulo
         Me.lblIdGenero.AutoSize = True
         Me.lblIdGenero.BackColor = System.Drawing.Color.Transparent
         Me.lblIdGenero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdGenero.Location = New System.Drawing.Point(0, 54)
+        Me.lblIdGenero.Location = New System.Drawing.Point(11, 54)
         Me.lblIdGenero.Name = "lblIdGenero"
         Me.lblIdGenero.Size = New System.Drawing.Size(63, 13)
         Me.lblIdGenero.TabIndex = 16
@@ -189,7 +194,7 @@ Partial Class frmTitulo
         Me.lblAño.AutoSize = True
         Me.lblAño.BackColor = System.Drawing.Color.Transparent
         Me.lblAño.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAño.Location = New System.Drawing.Point(1, 132)
+        Me.lblAño.Location = New System.Drawing.Point(12, 132)
         Me.lblAño.Name = "lblAño"
         Me.lblAño.Size = New System.Drawing.Size(33, 13)
         Me.lblAño.TabIndex = 20
@@ -199,11 +204,51 @@ Partial Class frmTitulo
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'frmTitulos
+        'dgvActores
+        '
+        Me.dgvActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvActores.Location = New System.Drawing.Point(12, 229)
+        Me.dgvActores.Name = "dgvActores"
+        Me.dgvActores.Size = New System.Drawing.Size(272, 156)
+        Me.dgvActores.TabIndex = 28
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 210)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.TabIndex = 29
+        Me.Label1.Text = "Actores"
+        '
+        'btnAgregarActor
+        '
+        Me.btnAgregarActor.Location = New System.Drawing.Point(290, 229)
+        Me.btnAgregarActor.Name = "btnAgregarActor"
+        Me.btnAgregarActor.Size = New System.Drawing.Size(56, 23)
+        Me.btnAgregarActor.TabIndex = 30
+        Me.btnAgregarActor.Text = "Agregar"
+        Me.btnAgregarActor.UseVisualStyleBackColor = True
+        '
+        'btnBorrarActor
+        '
+        Me.btnBorrarActor.Location = New System.Drawing.Point(290, 258)
+        Me.btnBorrarActor.Name = "btnBorrarActor"
+        Me.btnBorrarActor.Size = New System.Drawing.Size(56, 23)
+        Me.btnBorrarActor.TabIndex = 31
+        Me.btnBorrarActor.Text = "Borrar"
+        Me.btnBorrarActor.UseVisualStyleBackColor = True
+        '
+        'frmTitulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(329, 261)
+        Me.ClientSize = New System.Drawing.Size(358, 439)
+        Me.Controls.Add(Me.btnBorrarActor)
+        Me.Controls.Add(Me.btnAgregarActor)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dgvActores)
         Me.Controls.Add(Me.txtDirector)
         Me.Controls.Add(Me.lblDirector)
         Me.Controls.Add(Me.txtIdActor)
@@ -220,9 +265,10 @@ Partial Class frmTitulo
         Me.Controls.Add(Me.lblVolumen)
         Me.Controls.Add(Me.lblIdGenero)
         Me.Controls.Add(Me.lblAño)
-        Me.Name = "frmTitulos"
+        Me.Name = "frmTitulo"
         Me.Text = "frmTitulos"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvActores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -244,4 +290,8 @@ Partial Class frmTitulo
     Friend WithEvents lblIdGenero As System.Windows.Forms.Label
     Friend WithEvents lblAño As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents dgvActores As System.Windows.Forms.DataGridView
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnBorrarActor As System.Windows.Forms.Button
+    Friend WithEvents btnAgregarActor As System.Windows.Forms.Button
 End Class

@@ -37,6 +37,8 @@
             txtVolumen.Text = Titulo.volumen
             txtDirector.Text = Titulo.director
 
+            Titulo.TituloCargarActores(Titulo.id,dgvActores)
+
         Else
             Me.Text = "Agregar Titulo"
 
