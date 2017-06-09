@@ -119,6 +119,12 @@
     <Compile Include="lstClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lstConsActores.Designer.vb">
+      <DependentUpon>lstConsActores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lstConsActores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lstEstados.Designer.vb">
       <DependentUpon>lstEstados.vb</DependentUpon>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lstClientes.resx">
       <DependentUpon>lstClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lstConsActores.resx">
+      <DependentUpon>lstConsActores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lstEstados.resx">
       <DependentUpon>lstEstados.vb</DependentUpon>

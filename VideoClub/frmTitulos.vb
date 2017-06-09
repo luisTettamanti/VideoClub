@@ -91,4 +91,7 @@
     End Sub
 
 
+    Private Sub btnAgregarActor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarActor.Click
+        lstConsActores.ShowDialog()
+    End Sub
 End Class
