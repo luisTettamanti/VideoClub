@@ -218,6 +218,7 @@ Public Class Titulos
         Dim objDataAdapter As New SqlDataAdapter(objComando)
         objDataAdapter.Fill(objDataTable)
         tabla.DataSource = objDataTable
+        tabla.Columns("id").Visible = False
         tabla.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         Cerrar()
     End Sub
@@ -243,4 +244,24 @@ Public Class Titulos
         End Try
     End Function
 
+    Public Function TituloActorBorrar(ByVal idTitulo As Integer, ByVal idActor As Integer)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("TituloActorBorrar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idTitulo", idTitulo)
+            objComando.Parameters.AddWithValue("@idActor", idActor)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            Cerrar()
+        End Try
+    End Function
 End Class

@@ -92,6 +92,12 @@
 
 
     Private Sub btnAgregarActor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarActor.Click
+        lstConsActores.idTitulo = txtId.Text
         lstConsActores.ShowDialog()
+    End Sub
+
+    Private Sub btnBorrarActor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrarActor.Click
+        Titulo.TituloActorBorrar(txtId.Text, dgvActores.Item("id", dgvActores.CurrentRow.Index).Value)
+        Titulo.TituloCargarActores(txtId.Text, dgvActores)
     End Sub
 End Class
