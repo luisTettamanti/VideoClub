@@ -20,35 +20,37 @@
     End Property
 
     Dim Titulo As New Titulos
+    Dim genero As New Generos
+
     Private Sub frmTitulo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         ErrorProvider1.Clear()
 
+        genero.GeneroCargarCombo(cmbGenero)
         If modificar = True Then
             Me.Text = "Modificar Titulo"
 
             Titulo = Titulo.TituloRecuperar(idTitulo)
 
             txtId.Text = Titulo.id
-            txtIdGenero.Text = Titulo.idGenero
-            txtIdActor.Text = Titulo.idActor
+            cmbGenero.SelectedValue = Titulo.idGenero
             txtNombre.Text = Titulo.nombre
             txtAño.Text = Titulo.año
             txtVolumen.Text = Titulo.volumen
             txtDirector.Text = Titulo.director
 
-            Titulo.TituloCargarActores(Titulo.id,dgvActores)
+            Titulo.TituloCargarActores(Titulo.id, dgvActores)
+
 
         Else
             Me.Text = "Agregar Titulo"
 
             txtId.Text = Nothing
-            txtIdGenero.Text = Nothing
-            txtIdActor.Text = Nothing
             txtNombre.Text = Nothing
             txtAño.Text = Nothing
             txtVolumen.Text = Nothing
             txtDirector.Text = Nothing
+            cmbGenero.Text = Nothing
         End If
 
     End Sub
@@ -56,8 +58,7 @@
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
 
-        Titulo.idGenero = txtIdGenero.Text
-        Titulo.idActor = txtIdActor.Text
+        Titulo.idGenero = cmbGenero.SelectedValue
         Titulo.nombre = txtNombre.Text
         Titulo.año = txtAño.Text
         Titulo.volumen = txtVolumen.Text

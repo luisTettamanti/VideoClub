@@ -141,4 +141,26 @@ Public Class Generos
         End Try
 
     End Function
+
+    Public Sub GeneroCargarCombo(ByVal ComboActual As ComboBox)
+
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("GeneroCargarCombo", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            Dim objDataTable As New Data.DataTable
+            objDataAdapter.Fill(objDataTable)
+            With ComboActual
+                .DataSource = objDataTable
+                .DisplayMember = "descrip"
+                .ValueMember = "id"
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+
 End Class

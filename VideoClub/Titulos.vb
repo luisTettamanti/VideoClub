@@ -264,4 +264,5 @@ Public Class Titulos
             Cerrar()
         End Try
     End Function
+
 End Class
