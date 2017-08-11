@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actores.vb" />
+    <Compile Include="Alquileres.Designer.vb">
+      <DependentUpon>Alquileres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alquileres.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clientes.vb" />
     <Compile Include="Conexion.vb" />
     <Compile Include="frmActores.Designer.vb">
@@ -168,6 +174,9 @@
     <Compile Include="Titulos.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Alquileres.resx">
+      <DependentUpon>Alquileres.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmActores.resx">
       <DependentUpon>frmActores.vb</DependentUpon>
     </EmbeddedResource>
