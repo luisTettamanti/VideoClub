@@ -113,6 +113,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Generos.vb" />
+    <Compile Include="Habitaciones.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="lstActores.Designer.vb">
       <DependentUpon>lstActores.vb</DependentUpon>
     </Compile>
@@ -171,6 +174,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Proveedor.vb" />
+    <Compile Include="Reservas.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Titulos.vb" />
   </ItemGroup>
   <ItemGroup>

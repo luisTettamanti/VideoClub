@@ -6,15 +6,31 @@
         Dim posX As Integer = 0
         Dim posY As Integer = 0
         Dim tamanio As Integer = 30
+        Dim btnReserva As Reservas
+
+        Dim flpHabitacion As FlowLayoutPanel
+        Dim arflpHabitaciones(10)
+        'For i = 0 To 9
+        '    flpHabitacion = New FlowLayoutPanel
+        '    flpHabitacion.BackColor = Color.Red
+        '    flpHabitacion.Width = 591
+        '    flpHabitacion.Height = 32
+        '    flpHabitacion.FlowDirection = FlowDirection.LeftToRight
+        '    arflpHabitaciones(i) = flpHabitacion
+        '    flpContenedor.Controls.Add(arflpHabitaciones(i))
+        'Next
+
         For i = 0 To 9
-            Dim btnAlquiler As New Button
-            btnAlquiler.Left = posX
-            btnAlquiler.Top = posY
-            btnAlquiler.Width = arReservas(i) * 10
-            btnAlquiler.Show()
-            Me.flpHabitacion.Controls.Add(btnAlquiler)
+            btnReserva = New Reservas
+            btnReserva.id = i
+            btnReserva.Left = posX
+            btnReserva.Top = posY
+            btnReserva.Width = arReservas(i) * 10
+            flpContenedor.Controls(arHabitaciones(i)).Controls.Add(btnReserva)
+            'flpContenedor.Controls.Add(btnReserva)
+            btnReserva.Show()
             posY += 20
-            tamanio += 30
         Next
     End Sub
+
 End Class
