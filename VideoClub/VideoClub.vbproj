@@ -74,6 +74,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clientes.vb" />
+    <Compile Include="como.Designer.vb">
+      <DependentUpon>como.vb</DependentUpon>
+    </Compile>
+    <Compile Include="como.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conexion.vb" />
     <Compile Include="frmActores.Designer.vb">
       <DependentUpon>frmActores.vb</DependentUpon>
@@ -115,12 +121,6 @@
     <Compile Include="Generos.vb" />
     <Compile Include="Habitaciones.vb">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="hola.Designer.vb">
-      <DependentUpon>hola.vb</DependentUpon>
-    </Compile>
-    <Compile Include="hola.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="lstActores.Designer.vb">
       <DependentUpon>lstActores.vb</DependentUpon>
